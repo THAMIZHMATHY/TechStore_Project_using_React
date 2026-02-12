@@ -38,6 +38,7 @@ HTML5
 CSS3
 
 📂 Project Structure
+
 src/
  ├── components/
  │     ├── ProductCard.jsx
