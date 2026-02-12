@@ -37,8 +37,9 @@ HTML5
 
 CSS3
 
-📂 Project Structure
+## 📂 Project Structure
 
+```
 src/
  ├── components/
  │     ├── ProductCard.jsx
@@ -47,6 +48,8 @@ src/
  │     └── products.js
  ├── App.js
  └── index.js
+```
+
 
 🌟 Future Improvements
 
