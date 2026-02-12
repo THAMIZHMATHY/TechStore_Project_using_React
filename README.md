@@ -9,10 +9,15 @@ A modern product listing web application built with React that dynamically rende
 📌 Features
 
 ✅ Dynamic product rendering using arrays
+
 ✅ Reusable React components
+
 ✅ Clean and responsive UI
+
 ✅ Bestseller tags and discount display
+
 ✅ Easy scalability — add products by updating the array
+
 ✅ Beginner-friendly project with strong React fundamentals
 
 🧠 What I Learned
