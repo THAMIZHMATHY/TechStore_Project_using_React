@@ -1,16 +1,64 @@
-# React + Vite
+🛍️ React Product Listing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern product listing web application built with React that dynamically renders product data from a structured JavaScript array. The app demonstrates core React concepts such as component-based architecture, props, and list rendering while maintaining a clean and scalable UI.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 https://techstore-using-react.netlify.app/
 
-## React Compiler
+📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Dynamic product rendering using arrays
+✅ Reusable React components
+✅ Clean and responsive UI
+✅ Bestseller tags and discount display
+✅ Easy scalability — add products by updating the array
+✅ Beginner-friendly project with strong React fundamentals
 
-## Expanding the ESLint configuration
+🧠 What I Learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Rendering lists using map() in React
+
+Managing and structuring data with arrays of objects
+
+Creating reusable components
+
+Passing data through props
+
+Writing clean, maintainable front-end code
+
+🛠️ Tech Stack
+
+React.js
+
+JavaScript (ES6+)
+
+HTML5
+
+CSS3
+
+📂 Project Structure
+src/
+ ├── components/
+ │     ├── ProductCard.jsx
+ │     └── ProductList.jsx
+ ├── data/
+ │     └── products.js
+ ├── App.js
+ └── index.js
+
+🌟 Future Improvements
+
+Add cart functionality
+
+Implement product search & filters
+
+Connect to a backend API
+
+Add authentication
+
+Improve UI with animations
+
+🙌 Acknowledgements
+
+Product images are sourced for educational purposes. This project was built to practice React and modern front-end development.
