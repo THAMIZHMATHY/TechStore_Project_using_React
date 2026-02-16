@@ -99,7 +99,7 @@ Modular CSS Architecture
 Responsive Layout Principles
 
 📁 Project Structure
--------------------
+```
 
 src/
 │
@@ -111,20 +111,28 @@ src/
 ├── App.jsx
 ├── App.css
 
--------------------
+```
 
 🔥 Future Enhancements
 
 Consider adding these next:
 
 ✅ Context API or Redux for global cart state
+
 ✅ LocalStorage persistence for cart & wishlist
+
 ✅ Product details page
+
 ✅ Authentication system
+
 ✅ Backend integration
+
 ✅ Payment gateway
+
 ✅ Animations (Framer Motion)
+
 ✅ Skeleton loaders
+
 ✅ Deployment (Netlify / Vercel)
 
 🎯 Learning Outcome
