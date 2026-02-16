@@ -6,6 +6,11 @@ TechStore is a responsive e-commerce web application built using React.js that d
 
 The application emphasizes component-based architecture, state management, and clean UI design, making it a strong portfolio project for front-end developers.
 
+## 🌐 Live Demo
+
+🔗 **View the Application:**  
+(https://techstore-using-react.netlify.app/)
+
 🚀 Key Features
 
 🧩 Component-Based Design
