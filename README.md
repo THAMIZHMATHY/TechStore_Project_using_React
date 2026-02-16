@@ -1,4 +1,5 @@
 🛒 TechStore – Modern React E-Commerce UI
+
 📌 Project Overview
 
 TechStore is a responsive e-commerce web application built using React.js that delivers a smooth shopping experience. Users can browse products, search items, filter by brand, manage a wishlist, and add products to a dynamic shopping cart.
@@ -6,6 +7,7 @@ TechStore is a responsive e-commerce web application built using React.js that d
 The application emphasizes component-based architecture, state management, and clean UI design, making it a strong portfolio project for front-end developers.
 
 🚀 Key Features
+
 🧩 Component-Based Design
 
 Reusable ProductCard component
@@ -13,6 +15,7 @@ Reusable ProductCard component
 Dedicated styling with ProductCard.css
 
 Modular and maintainable folder structure
+
 
 🛍️ Product Browsing
 
@@ -30,6 +33,7 @@ Rating
 
 Best Seller tag
 
+
 🔎 Search, Filter & Sort
 
 Live search functionality
@@ -43,6 +47,7 @@ Price: Low → High
 Price: High → Low
 
 Rating
+
 
 ❤️ Wishlist
 
@@ -78,6 +83,7 @@ Empty state screens
 
 Clean typography and spacing
 
+
 🧠 Skills Demonstrated
 
 This project showcases strong knowledge of:
@@ -97,6 +103,7 @@ UI State Control
 Modular CSS Architecture
 
 Responsive Layout Principles
+
 
 📁 Project Structure
 ```
@@ -134,6 +141,7 @@ Consider adding these next:
 ✅ Skeleton loaders
 
 ✅ Deployment (Netlify / Vercel)
+
 
 🎯 Learning Outcome
 
