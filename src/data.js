@@ -9,44 +9,49 @@ const products = [
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Desktops/Images/311754_0_p4etiv.png",
     isBestSeller: true,
+    brand: "Apple",
   },
   {
     id: 2,
     name: "Apple iPhone 17 Pro Max, 1TB",
     price: 129999,
-    rating: 4.9,
+    rating: 4.0,
     discount: "15% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/317417_0_7ISiBcc4Y.png?updatedAt=1757529273198",
     isBestSeller: true,
+    brand: "Apple",
   },
   {
     id: 3,
     name: "iPad Pro 13-Inch (M4): XDR Display, 512GB",
     price: 89999,
-    rating: 4.9,
+    rating: 4.5,
     discount: "35% OFF",
     image:
       "https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264226_fefcjf.png",
+    brand: "Apple",
   },
   {
     id: 4,
     name: "PlayStation 5 Console - 1TB, PRO Controller",
     price: 68999,
-    rating: 4.8,
+    rating: 4,
     discount: "10% OFF",
     image:
       "https://media.tatacroma.com/Croma%20Assets/Gaming/Gaming%20Consoles/Images/305985_ilpfe3.png",
+    brand: "Sony",
   },
   {
     id: 5,
     name: "Samsung Galaxy S24 Ultra, 512GB",
     price: 119999,
-    rating: 4.8,
+    rating: 4,
     discount: "18% OFF",
     image:
       "https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/303820_hxjq29.png",
     isBestSeller: true,
+    brand: "Samsung",
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const products = [
     discount: "12% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/305382_uvrdrb.png?tr=w-640",
+    brand: "Apple",
   },
   {
     id: 7,
@@ -66,6 +72,7 @@ const products = [
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/262565_0_cMTz4dVUv.png?updatedAt=1758554204931?tr=w-400",
     isBestSeller: true,
+    brand: "Sony",
   },
   {
     id: 8,
@@ -75,15 +82,17 @@ const products = [
     discount: "22% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/306604_0_bcvgzw.png?tr=w-400",
+    brand: "Dell",
   },
   {
     id: 9,
     name: "Apple Watch Series 9 GPS, 45mm",
     price: 41999,
-    rating: 4.8,
+    rating: 5,
     discount: "15% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Wearable%20Devices/Images/317745_0_9CJQDL61E.png?updatedAt=1757599365909?tr=w-400",
+    brand: "Apple",
   },
   {
     id: 10,
@@ -93,16 +102,18 @@ const products = [
     discount: "25% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Speakers%20and%20Media%20Players/Images/234895_0_snktsa.png?tr=w-400",
+    brand: "Bose",
   },
   {
     id: 11,
     name: "LG 55-inch OLED evo 4K Smart TV",
     price: 139999,
-    rating: 4.9,
+    rating: 4,
     discount: "30% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Television/Images/316299_0_udgulm.png?tr=w-400",
     isBestSeller: true,
+    brand: "LG",
   },
   {
     id: 12,
@@ -112,6 +123,7 @@ const products = [
     discount: "10% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/259484_ut2ku2.png?tr=w-400",
+    brand: "Canon",
   },
   {
     id: 13,
@@ -121,6 +133,7 @@ const products = [
     discount: "18% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/315367_0_L8SqpdqXa.png?updatedAt=1758638361381?tr=w-400",
+    brand: "HP",
   },
   {
     id: 14,
@@ -130,15 +143,17 @@ const products = [
     discount: "28% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Computer%20Accessories%20and%20Tablets%20Accessories/Images/258454_0_1bdnWCNcL.png?updatedAt=1758555097829?tr=w-400",
+    brand: "Logitech",
   },
   {
     id: 15,
     name: "Samsung 980 Pro 2TB NVMe SSD",
     price: 18999,
-    rating: 4.8,
+    rating: 4,
     discount: "35% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Storage%20Devices/Images/271277_0_zolpo1.png?tr=w-400",
+    brand: "Samsung",
   },
   {
     id: 16,
@@ -148,6 +163,7 @@ const products = [
     discount: "17% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/316162_0_3T9HPjUfKA.png?updatedAt=1763117702877?tr=w-400",
+    brand: "Asus",
   },
   {
     id: 17,
@@ -158,6 +174,7 @@ const products = [
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/300424_0__0PMDfQWpC.png?updatedAt=1758554112861?tr=w-400",
     isBestSeller: true,
+    brand: "GoPro",
   },
   {
     id: 18,
@@ -167,15 +184,17 @@ const products = [
     discount: "12% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/314525_0_hxqlxn.png?tr=w-400",
+    brand: "Nothing",
   },
   {
     id: 19,
     name: "Amazon Kindle Paperwhite (11th Gen)",
     price: 13999,
-    rating: 4.7,
+    rating: 5,
     discount: "20% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Speakers%20and%20Media%20Players/Images/262838_pllhhx.png?tr=w-400",
+    brand: "Amazon",
   },
   {
     id: 20,
@@ -185,6 +204,7 @@ const products = [
     discount: "16% OFF",
     image:
       "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/308518_0_VgjK9AQdw.png?updatedAt=1762329370455?tr=w-400",
+    brand: "Microsoft",
   },
 ];
 

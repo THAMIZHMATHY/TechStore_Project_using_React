@@ -1,7 +1,7 @@
 import "./ProductCard.css";
 
 export default function ProductCard({
-  key,
+  id,
   image,
   name,
   price,
@@ -9,12 +9,21 @@ export default function ProductCard({
   discount,
   rating,
   isBestSeller,
+  isWishlisted,
+  onAddToCart,
+  onToggleWishlist,
 }) {
   return (
     <div className="product-card">
-      {key}
       {/* Discount Badge */}
       {discount && <span className="discount-badge">{discount}</span>}
+
+      <button
+        className={`wishlisted ${isWishlisted ? "active" : ""}`}
+        onClick={onToggleWishlist}
+      >
+        {isWishlisted ? "❤️" : "🤍"}
+      </button>
 
       {/* Product Image */}
       <div className="image-container">
@@ -27,7 +36,10 @@ export default function ProductCard({
 
         {/* Rating */}
         <div className="rating">
-          <span className="stars">★★★★★</span>
+          <span className="stars">
+            {"★".repeat(Math.floor(rating))}
+            {"☆".repeat(5 - Math.floor(rating))}
+          </span>
           <span className="rating-value">{rating}</span>
           {isBestSeller && <span className="bestseller-tag">Best Seller</span>}
         </div>
@@ -41,7 +53,9 @@ export default function ProductCard({
         </div>
 
         {/* Button */}
-        <button className="add-btn">Add to Cart</button>
+        <button className="add-btn" onClick={onAddToCart}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

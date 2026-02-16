@@ -1,11 +1,42 @@
 .product-card {
   position: relative;
-  background: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 20px;
   padding: 24px;
   transition: all 0.3s ease;
   overflow: hidden;
+}
+
+/* Wishlist Button */
+.wishlisted {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background: var(--wishlist-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.wishlisted:hover {
+  background: var(--wishlist-hover-bg);
+  transform: scale(1.15);
+}
+
+.wishlisted.active {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.2);
 }
 
 /* Hover Glow Effect */
@@ -17,11 +48,9 @@
   right: 0;
   bottom: 0;
   border-radius: 20px;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(0, 113, 227, 0.1) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse at 50% 0%,
+      var(--card-glow) 0%,
+      transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -29,10 +58,8 @@
 
 .product-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(0, 113, 227, 0.1);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .product-card:hover::before {
@@ -57,7 +84,7 @@
 
 /* Image Container */
 .image-container {
-  background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+  background: var(--card-image-bg);
   border-radius: 16px;
   padding: 32px;
   margin-bottom: 20px;
@@ -78,8 +105,8 @@
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(var(--card-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--card-grid-line) 1px, transparent 1px);
   background-size: 20px 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -99,7 +126,7 @@
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 /* Card Content */
@@ -116,7 +143,7 @@
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--product-name-color);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -127,7 +154,7 @@
 }
 
 .product-card:hover .product-name {
-  color: #ffffff;
+  color: var(--product-name-hover);
 }
 
 /* Rating */
@@ -146,7 +173,7 @@
 
 .rating-value {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--rating-color);
   font-weight: 500;
 }
 
@@ -172,13 +199,13 @@
 .price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: var(--price-color);
   letter-spacing: -0.02em;
 }
 
 .original-price {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--original-price-color);
   text-decoration: line-through;
 }
 
@@ -206,12 +233,10 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent);
   transition: left 0.4s ease;
 }
 
