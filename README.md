@@ -4,11 +4,15 @@
 
 Designed as a strong portfolio project, TechStore demonstrates the ability to build real-world front-end applications using modern React practices.
 
+---
+
 
 🌐 Live Demo
 
 🔗 View the Application:
 https://techstore-using-react.netlify.app/
+
+---
 
 
 📌 Project Overview
@@ -31,6 +35,8 @@ Retain data even after refreshing the browser
 
 The project highlights clean design patterns and user-focused functionality similar to production e-commerce platforms.
 
+---
+
 
 ✨ Core Features
 
@@ -43,6 +49,8 @@ Modular folder structure
 Dedicated CSS for maintainability
 
 Scalable design for future expansion
+
+---
 
 
 🛍️ Product Browsing
@@ -61,6 +69,8 @@ Rating
 
 Best Seller badge
 
+---
+
 
 🔎 Search, Filter & Sort
 
@@ -78,6 +88,8 @@ Rating
 
 Provides a smooth, modern shopping flow.
 
+---
+
 
 ❤️ Wishlist System
 
@@ -86,6 +98,8 @@ Add/remove items instantly
 Navbar wishlist counter
 
 Move products directly to cart
+
+---
 
 
 🛒 Dynamic Shopping Cart
@@ -99,6 +113,8 @@ Automatic price calculation
 Dropdown cart panel
 
 Empty cart state UI
+
+---
 
 🔄 Persistent State Management (Advanced Feature)
 
@@ -130,6 +146,8 @@ JSON.stringify() stores structured data
 
 JSON.parse() restores application state safely
 
+---
+
 
 
 🌗 Dark / Light Mode
@@ -139,6 +157,8 @@ Global theme toggle
 Implemented using data-theme
 
 User preference persists after reload
+
+---
 
 
 🎨 Modern UI Experience
@@ -156,6 +176,8 @@ Empty-state illustrations
 Strong visual hierarchy
 
 Built with usability as the priority.
+
+---
 
 
 🧠 Skills Demonstrated
@@ -190,6 +212,8 @@ Responsive layout principles
 
 Production-style UX patterns
 
+---
+
 
 
 📁 Project Structure
@@ -205,6 +229,7 @@ src/
 ├── App.css
 ```
 
+---
 
 
 🔥 Future Enhancements
@@ -228,6 +253,8 @@ To evolve TechStore into a full-scale production app:
 ✅ Skeleton loaders
 
 ✅ Performance optimization
+
+---
 
 
 🎯 Learning Outcome
