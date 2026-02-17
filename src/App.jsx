@@ -6,9 +6,43 @@ import { useState, useEffect } from "react";
 function App() {
   const allBrands = [...new Set(products.map((p) => p.brand))];
   //array of products in cart
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("techstore-cart");
+    if (savedCart) {
+      try {
+        return JSON.parse(savedCart);
+      } catch (error) {
+        console.error("Problem!!", error);
+        return [];
+      }
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("techstore-cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   //array of product ID's that are wishlisted
-  const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState(() => {
+    const savedWishlist = localStorage.getItem("techstore-wishlist");
+    if (savedWishlist) {
+      try {
+        return JSON.parse(savedWishlist);
+      } catch (error) {
+        console.error("Problem!!", error);
+        return [];
+      }
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("techstore-wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
+
   //what user search in searchBox
   const [searchTerm, setSearchTerm] = useState("");
   //which brand is selected all means show all
@@ -143,7 +177,11 @@ function App() {
           </ul>
 
           <div className="nav-actions">
-            <button className="theme-toggle" onClick={toggleTheme} title={`Switch to ${theme === "dark" ? "Light" : "Dark"} Mode`}>
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              title={`Switch to ${theme === "dark" ? "Light" : "Dark"} Mode`}
+            >
               <span className="theme-toggle-thumb">
                 {theme === "dark" ? (
                   <svg
@@ -189,15 +227,25 @@ function App() {
             <button
               className="cart-btn"
               title={`Wishlist: ${wishlistCount} items`}
-              onClick={() => { setShowWishlist(!showWishlist); setShowCart(false); }}
+              onClick={() => {
+                setShowWishlist(!showWishlist);
+                setShowCart(false);
+              }}
             >
               ❤️
-              {wishlistCount > 0 && <span className="cart-badge wishlist-badge">{wishlistCount}</span>}
+              {wishlistCount > 0 && (
+                <span className="cart-badge wishlist-badge">
+                  {wishlistCount}
+                </span>
+              )}
             </button>
             <button
               className="cart-btn"
               title={`Cart Total: ₹${cartTotal.toLocaleString()}`}
-              onClick={() => { setShowCart(!showCart); setShowWishlist(false); }}
+              onClick={() => {
+                setShowCart(!showCart);
+                setShowWishlist(false);
+              }}
             >
               🛒
               {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
@@ -211,7 +259,12 @@ function App() {
             <div className="dropdown-panel cart-dropdown">
               <div className="dropdown-header">
                 <h3>🛒 Your Cart ({cartCount})</h3>
-                <button className="dropdown-close" onClick={() => setShowCart(false)}>✕</button>
+                <button
+                  className="dropdown-close"
+                  onClick={() => setShowCart(false)}
+                >
+                  ✕
+                </button>
               </div>
               {cartItems.length === 0 ? (
                 <div className="dropdown-empty">
@@ -223,24 +276,41 @@ function App() {
                   <div className="dropdown-items">
                     {cartItems.map((item) => (
                       <div key={item.id} className="dropdown-item">
-                        <img src={item.image} alt={item.name} className="dropdown-item-img" />
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="dropdown-item-img"
+                        />
                         <div className="dropdown-item-info">
                           <p className="dropdown-item-name">{item.name}</p>
-                          <p className="dropdown-item-price">₹{item.price.toLocaleString()}</p>
+                          <p className="dropdown-item-price">
+                            ₹{item.price.toLocaleString()}
+                          </p>
                           <div className="quantity-controls">
-                            <button onClick={() => updateQuantity(item.id, -1)}>−</button>
+                            <button onClick={() => updateQuantity(item.id, -1)}>
+                              −
+                            </button>
                             <span>{item.quantity}</span>
-                            <button onClick={() => updateQuantity(item.id, 1)}>+</button>
+                            <button onClick={() => updateQuantity(item.id, 1)}>
+                              +
+                            </button>
                           </div>
                         </div>
-                        <button className="dropdown-item-remove" onClick={() => removeFromCart(item.id)}>🗑️</button>
+                        <button
+                          className="dropdown-item-remove"
+                          onClick={() => removeFromCart(item.id)}
+                        >
+                          🗑️
+                        </button>
                       </div>
                     ))}
                   </div>
                   <div className="dropdown-footer">
                     <div className="dropdown-total">
                       <span>Total</span>
-                      <span className="total-price">₹{cartTotal.toLocaleString()}</span>
+                      <span className="total-price">
+                        ₹{cartTotal.toLocaleString()}
+                      </span>
                     </div>
                   </div>
                 </>
@@ -253,7 +323,12 @@ function App() {
             <div className="dropdown-panel wishlist-dropdown">
               <div className="dropdown-header">
                 <h3>❤️ Wishlist ({wishlistCount})</h3>
-                <button className="dropdown-close" onClick={() => setShowWishlist(false)}>✕</button>
+                <button
+                  className="dropdown-close"
+                  onClick={() => setShowWishlist(false)}
+                >
+                  ✕
+                </button>
               </div>
               {wishlistedProducts.length === 0 ? (
                 <div className="dropdown-empty">
@@ -264,14 +339,32 @@ function App() {
                 <div className="dropdown-items">
                   {wishlistedProducts.map((item) => (
                     <div key={item.id} className="dropdown-item">
-                      <img src={item.image} alt={item.name} className="dropdown-item-img" />
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="dropdown-item-img"
+                      />
                       <div className="dropdown-item-info">
                         <p className="dropdown-item-name">{item.name}</p>
-                        <p className="dropdown-item-price">₹{item.price.toLocaleString()}</p>
+                        <p className="dropdown-item-price">
+                          ₹{item.price.toLocaleString()}
+                        </p>
                       </div>
                       <div className="dropdown-item-actions">
-                        <button className="dropdown-add-cart" onClick={() => { addToCart(item); }}>🛒 Add</button>
-                        <button className="dropdown-item-remove" onClick={() => toggleWishlist(item.id)}>✕</button>
+                        <button
+                          className="dropdown-add-cart"
+                          onClick={() => {
+                            addToCart(item);
+                          }}
+                        >
+                          🛒 Add
+                        </button>
+                        <button
+                          className="dropdown-item-remove"
+                          onClick={() => toggleWishlist(item.id)}
+                        >
+                          ✕
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -296,7 +389,9 @@ function App() {
             to cutting-edge smartphones, find everything you need in one place.
           </p>
           <div className="hero-cta">
-            <a href="#products"><button className="btn-primary">Explore Products</button></a>
+            <a href="#products">
+              <button className="btn-primary">Explore Products</button>
+            </a>
             <button className="btn-secondary">Learn More</button>
           </div>
         </div>
@@ -369,7 +464,10 @@ function App() {
           <div className="no-results">
             <span className="no-results-icon">🔎</span>
             <h3>No products found</h3>
-            <p>Try adjusting your search or filter to find what you're looking for.</p>
+            <p>
+              Try adjusting your search or filter to find what you're looking
+              for.
+            </p>
           </div>
         ) : (
           <div className="product-grid">
