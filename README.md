@@ -10,7 +10,7 @@ Designed as a strong portfolio project, TechStore demonstrates the ability to bu
 🌐 Live Demo
 
 🔗 View the Application:
-https://techstore-using-react.netlify.app/
+(https://tech-store-project-using-react-eight.vercel.app/)
 
 ---
 
