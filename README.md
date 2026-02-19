@@ -186,7 +186,7 @@ This project showcases strong proficiency in:
 
 React
 
-Hooks (useState, useEffect)
+Hooks (useState, useEffect, useRef)
 
 Component communication via props
 
@@ -220,16 +220,34 @@ Production-style UX patterns
 ```
 src/
 │
+├── assets/
+│   ├── logo.png
+│   └── react.svg
+│
 ├── components/
-│   ├── ProductCard.jsx
-│   └── ProductCard.css
+│   ├── HERO-SECTION/
+│   │   └── Hero.jsx
+│   │
+│   ├── NAV-BAR/
+│   │   ├── Buttons.jsx
+│   │   ├── Cart.jsx
+│   │   ├── NavLinks.jsx
+│   │   ├── NavLogo.jsx
+│   │   ├── Toggle.jsx
+│   │   └── Wishlist.jsx
+│   │
+│   └── SECTIONS/
+│       ├── BestSeller.jsx
+│       ├── Footer.jsx
+│       ├── ProductCard.jsx
+│       └── ProductCard.css
 │
 ├── data.js
 ├── App.jsx
 ├── App.css
+├── index.css
+└── main.jsx
 ```
-
----
 
 
 🔥 Future Enhancements
